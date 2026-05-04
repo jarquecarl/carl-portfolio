@@ -1756,3 +1756,46 @@
   .mobile-sheet-overlay,
   .mobile-sheet { display: none !important; }
 }
+
+.resume-viewer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.resume-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.resume-toolbar-label { color: rgba(255,255,255,0.6); }
+
+.resume-download-btn {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.85);
+  border: 1px solid rgba(255,255,255,0.15);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.resume-download-btn:hover { background: rgba(255,255,255,0.14); }
+
+.resume-embed-wrap {
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.resume-embed-wrap object {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

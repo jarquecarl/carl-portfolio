@@ -244,17 +244,32 @@ export function ResumeContent() {
     <div className="resume-viewer">
       <div className="resume-toolbar">
         <span className="resume-toolbar-label">📄 Carl_Christian_Jarque_CV.pdf</span>
-        <a href="/Carl_Christian_Jarque_CV.pdf" download="Carl_Christian_Jarque_CV.pdf" className="resume-download-btn">
+        <a
+          href="/Carl_Christian_Jarque_CV.pdf"
+          download="Carl_Christian_Jarque_CV.pdf"
+          className="resume-download-btn"
+        >
           ⬇ Download
         </a>
       </div>
       <div className="resume-embed-wrap">
-        <iframe src="/Carl_Christian_Jarque_CV.pdf" title="Resume" className="resume-iframe" />
+        <object
+          data="/Carl_Christian_Jarque_CV.pdf"
+          type="application/pdf"
+          width="100%"
+          height="100%"
+        >
+          <p style={{ padding: 20, color: "rgba(255,255,255,0.6)", fontSize: 13 }}>
+            PDF cannot be displayed.{" "}
+            <a href="/Carl_Christian_Jarque_CV.pdf" download style={{ color: "#60a5fa" }}>
+              Download instead
+            </a>
+          </p>
+        </object>
       </div>
     </div>
   );
 }
-  
 
   
   
