@@ -890,6 +890,12 @@
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.15s;
+  text-align: left;
+  width: 100%;
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: inherit;
 }
 
 .start-menu-rec-item:hover { background: rgba(255,255,255,0.06); }
