@@ -14,9 +14,10 @@ import {
   ExperienceContent,
   CertificationsContent,
   ContactContent,
+  ResumeContent,
 } from "@/components/WindowContent";
 
-type WindowId = "projects" | "skills" | "about" | "experience" | "certifications" | "contact" | "academic";
+type WindowId = "projects" | "skills" | "about" | "experience" | "certifications" | "contact" | "academic" | "resume";
 
 interface WindowState {
   id: WindowId;
@@ -50,6 +51,7 @@ const WINDOW_CONFIG: Record<WindowId, { title: string; icon: string; width: numb
   certifications: { title: "Certifications", icon: "🎓", width: 520, height: 400 },
   contact: { title: "Contact", icon: "📩", width: 420, height: 440 },
   academic: { title: "Academic Works", icon: "🎓", width: 540, height: 480 },
+  resume: { title: "Resume — Carl Christian Jarque", icon: "📄", width: 680, height: 560 },
 };
 
 function getWindowContent(id: WindowId) {
@@ -61,6 +63,7 @@ function getWindowContent(id: WindowId) {
     case "certifications": return <CertificationsContent />;
     case "contact": return <ContactContent />;
     case "academic": return <AcademicWorksContent />;
+    case "resume": return <ResumeContent />;
   }
 }
 
@@ -99,7 +102,6 @@ export default function App() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Show hint after login
   useEffect(() => {
     if (loggedIn && !isMobile) {
       const t = setTimeout(() => {
@@ -242,21 +244,14 @@ export default function App() {
       style={{ width: "100%", height: "100%", position: "fixed", inset: 0, overflow: "hidden" }}
       onContextMenu={handleDesktopRightClick}
     >
-      {/* Wallpaper */}
       <div className="wallpaper" />
 
-      {/* Brightness overlay */}
       <div
         className="brightness-overlay"
         style={{ opacity: 1 - brightness / 100 }}
       />
 
-      {/* Desktop area */}
-      <div
-        className="desktop"
-        onClick={handleDesktopClick}
-      >
-        {/* Desktop Icons */}
+      <div className="desktop" onClick={handleDesktopClick}>
         <div className="desktop-icons">
           {(searchQuery ? filteredIcons : DESKTOP_ICONS).map(({ id, icon, label }) => (
             <div
@@ -276,14 +271,12 @@ export default function App() {
           ))}
         </div>
 
-        {/* Hint tooltip */}
         {showHint && (
           <div className="desktop-hint">
             Double-click icons to open
           </div>
         )}
 
-        {/* Desktop Windows — desktop only */}
         {!isMobile &&
           openWindows.map((win) => (
             <Win11Window
@@ -302,7 +295,6 @@ export default function App() {
           ))}
       </div>
 
-      {/* Mobile bottom sheet */}
       {isMobile && mobileSheet && (
         <MobileSheet
           icon={WINDOW_CONFIG[mobileSheet].icon}
@@ -313,7 +305,6 @@ export default function App() {
         </MobileSheet>
       )}
 
-      {/* Start Menu */}
       {showStartMenu && (
         <StartMenu
           onClose={() => setShowStartMenu(false)}
@@ -321,7 +312,6 @@ export default function App() {
         />
       )}
 
-      {/* Context Menu */}
       {contextMenu && (
         <ContextMenu
           x={contextMenu.x}
@@ -331,7 +321,6 @@ export default function App() {
         />
       )}
 
-      {/* Notification Center */}
       {showNotif && (
         <NotificationCenter
           onClose={() => setShowNotif(false)}
@@ -343,7 +332,6 @@ export default function App() {
         />
       )}
 
-      {/* Taskbar */}
       <Taskbar
         openWindows={openWindows.map((w) => ({
           id: w.id,
@@ -360,3 +348,4 @@ export default function App() {
     </div>
   );
 }
+

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-type WindowId = "projects" | "skills" | "about" | "experience" | "certifications" | "contact";
+type WindowId = "projects" | "skills" | "about" | "experience" | "certifications" | "contact" | "academic" | "resume";
 
 interface StartMenuProps {
   onClose: () => void;
@@ -45,6 +45,21 @@ export default function StartMenu({ onClose, onOpenWindow }: StartMenuProps) {
     onClose();
   };
 
+  const handleResumeClick = () => {
+    onOpenWindow("resume");
+    onClose();
+  };
+
+  const handleGitHubClick = () => {
+    window.open("https://github.com/jarquecarl-debug", "_blank");
+    onClose();
+  };
+
+  const handleLinkedInClick = () => {
+    window.open("https://www.linkedin.com/in/carl-jarque-6b65b63bb/", "_blank");
+    onClose();
+  };
+
   return (
     <div className="start-menu" ref={menuRef}>
       <div className="start-menu-search">
@@ -74,27 +89,27 @@ export default function StartMenu({ onClose, onOpenWindow }: StartMenuProps) {
 
       <div className="start-menu-recommended-label">Recommended</div>
       <div className="start-menu-recommended">
-        <div className="start-menu-rec-item">
+        <button className="start-menu-rec-item" onClick={handleResumeClick}>
           <span style={{ fontSize: 20 }}>📄</span>
           <div>
-            <div className="start-menu-rec-name">Resume.pdf</div>
-            <div className="start-menu-rec-time">Download to view</div>
+            <div className="start-menu-rec-name">Resume</div>
+            <div className="start-menu-rec-time">Click to view</div>
           </div>
-        </div>
-        <div className="start-menu-rec-item">
+        </button>
+        <button className="start-menu-rec-item" onClick={handleGitHubClick}>
           <span style={{ fontSize: 20 }}>🐙</span>
           <div>
             <div className="start-menu-rec-name">GitHub Profile</div>
             <div className="start-menu-rec-time">github.com/jarquecarl-debug</div>
           </div>
-        </div>
-        <div className="start-menu-rec-item">
+        </button>
+        <button className="start-menu-rec-item" onClick={handleLinkedInClick}>
           <span style={{ fontSize: 20 }}>💼</span>
           <div>
             <div className="start-menu-rec-name">LinkedIn Profile</div>
             <div className="start-menu-rec-time">linkedin.com/in/carl-jarque</div>
           </div>
-        </div>
+        </button>
       </div>
 
       <div className="start-menu-footer">
