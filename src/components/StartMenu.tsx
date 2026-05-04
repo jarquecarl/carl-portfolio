@@ -115,7 +115,7 @@ export default function StartMenu({ onClose, onOpenWindow }: StartMenuProps) {
       <div className="start-menu-footer">
         <div className="start-menu-user">
           <div className="start-menu-user-avatar">
-            <img src="/IMG_7009.jpg" alt="CCJ" className="start-menu-user-avatar-img" />
+            <img src="/formal_img.png" alt="CCJ" className="start-menu-user-avatar-img" />
           </div>
           <span className="start-menu-user-name">Carl Christian Jarque</span>
         </div>
