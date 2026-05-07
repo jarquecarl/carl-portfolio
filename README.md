@@ -3,7 +3,7 @@
 My recruiter-focused portfolio site built with React and TypeScript, designed with a **Windows 11 desktop aesthetic** using shadcn/ui. A complete rebuild of my vanilla HTML/CSS v1 — same content, production-grade stack.
 
 [![Live Site](https://img.shields.io/badge/Live%20Site-carl--jarque--portfolio.netlify.app-00C7B7?style=flat-square&logo=netlify&logoColor=white)](https://carl-jarque-portfolio.netlify.app)
-[![GitHub](https://img.shields.io/badge/GitHub-jarquecarl--debug-181717?style=flat-square&logo=github)](https://github.com/jarquecarl/carl-portfolio)
+[![GitHub](https://img.shields.io/badge/GitHub-jarquecarl--181717?style=flat-square&logo=github)](https://github.com/jarquecarl/carl-portfolio)
 ![React](https://img.shields.io/badge/React_18-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
