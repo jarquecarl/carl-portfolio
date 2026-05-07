@@ -1,4 +1,4 @@
-# 🖥️ Developer Portfolio — v2
+# 🖥️ Developer Portfolio
 
 My recruiter-focused portfolio site built with React and TypeScript, designed with a **Windows 11 desktop aesthetic** using shadcn/ui. A complete rebuild of my vanilla HTML/CSS v1 — same content, production-grade stack.
 
