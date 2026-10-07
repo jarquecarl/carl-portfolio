@@ -64,23 +64,22 @@ export function ProjectsContent() {
       subtitle: "Thesis Project",
       desc: "PhiNex is a phishing detection security gateway built on the PYNQ-Z2 ARM-FPGA development board.",
       tags: ["Python", "FPGA", "Security", "Networking"],
-      status: "Actively Improving",
+      status: "Completed",
       github: "https://github.com/02rnfp-6815/PhiNex/tree/main",
     },
     {
-      title: "MRF Digitalization",
-      subtitle: "Internship Project",
+      title: "Digital Request & Approval System",
+      subtitle: "Client Project",
       desc: "A web application built during internship to digitalize MRF (Modification Request Form) processes, replacing manual record-keeping with a streamlined digital workflow.",
       tags: ["React", "Tailwind", "JSX", "Vite"],
-      status: "Actively Improving",
-      github: "https://github.com/jarquecarl/Digital-MRF",
+      status: "Delivered",
     },
     {
       title: "Fundo",
       subtitle: "Personal Project",
       desc: "A personal expense tracking app that categorizes and summarizes recent purchases, giving users a clear picture of their spending habits.",
       tags: ["JSX", "JavaScript", "Vite", "Tailwind"],
-      status: "Actively Improving",
+      status: "Live",
       liveUrl: "https://fundo-expense-tracking-app.netlify.app",
       github: "https://github.com/jarquecarl/fundo-expense-tracking-app",
     },
@@ -89,7 +88,7 @@ export function ProjectsContent() {
       subtitle: "Personal Project",
       desc: "A first-person 3D maze game built with React Three Fiber. Navigate procedurally-structured mazes, collect items, avoid a glowing ghost enemy with BFS pathfinding, and find the exit.",
       tags: ["React", "Three.js", "TypeScript", "Vite", "R3F"],
-      status: "Actively Improving",
+      status: "Live",
       liveUrl: "https://maze-game-3d.netlify.app",
       github: "https://github.com/jarquecarl/maze-game",
     },
@@ -221,19 +220,28 @@ export function AboutContent() {
 }
 
 export function ExperienceContent() {
-  const entries = [
-    {
-      company: "HS Technologies (Phils.) Inc.",
-      role: "Frontend Developer Intern",
-      duration: "240 hours · Ongoing",
-      responsibilities: [
-        "Built the MRF Digitalization web app, replacing manual Modification Request Form processes with a streamlined digital workflow using React, Tailwind CSS, and Vite.",
-        "Designed and developed responsive UI components and layouts, ensuring cross-device compatibility and consistent user experience.",
-        "Collaborated with the internal team to gather requirements and iteratively improve application features based on feedback.",
-        "Developed personal projects independently during downtime — including Fundo (expense tracker) and a Maze Game — demonstrating self-driven learning and initiative.",
-      ],
-    },
-  ];
+ const entries = [
+  {
+    company: "HS Technologies (Phils.) Inc.",
+    role: "Frontend Developer (Contract)",
+    duration: "Jun 2026 – Jul 2026 · Project-based",
+    responsibilities: [
+      "Delivered a production-ready version of the Digital Request & Approval System, resolving client-reported bugs, workflow corrections, and UI/UX changes.",
+      "Fixed Firebase Authentication and Firestore data handling issues and ran final QA across all modules before deployment.",
+    ],
+  },
+  {
+  company: "HS Technologies (Phils.) Inc.",
+  role: "Frontend Developer Intern",
+  duration: "240 hours",
+  responsibilities: [
+    "Built the Digital Request & Approval System, replacing a paper-based request process with a streamlined digital workflow using React, Tailwind CSS, and Vite.",
+    "Designed and developed responsive UI components and layouts, ensuring cross-device compatibility and consistent user experience.",
+    "Collaborated with the internal team to gather requirements and iteratively improve application features based on feedback.",
+    "Developed personal projects independently during downtime, including Fundo (expense tracker) and a Maze Game, demonstrating self-driven learning and initiative.",
+  ],
+},
+];
 
   return (
     <div className="experience-container">
