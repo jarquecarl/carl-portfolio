@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const BASE_URL = "https://jarquecarl-debug.github.io/CPE302-Activities";
+const BASE_URL = "https://jarquecarl.github.io/CPE302-Activities";
 
 interface FileLink {
   name: string;
@@ -260,7 +260,7 @@ export function AcademicWorksContent() {
           This PC &gt; Portfolio &gt; Academic Works
         </span>
         <button
-          onClick={() => window.open("https://github.com/jarquecarl-debug/CPE302-Activities", "_blank")}
+          onClick={() => window.open("https://github.com/jarquecarl/CPE302-Activities", "_blank")}
           style={{
             marginLeft: "auto",
             display: "flex", alignItems: "center", gap: 6,
@@ -321,7 +321,7 @@ export function AcademicWorksContent() {
               fontSize: 11, color: "rgba(255,255,255,0.35)",
               fontFamily: "'Segoe UI', system-ui, sans-serif",
             }}>
-              Open live overview · jarquecarl-debug.github.io/CPE302-Activities
+              Open live overview · jarquecarl.github.io/CPE302-Activities
             </div>
           </div>
           <svg width="12" height="12" viewBox="0 0 12 12" style={{ marginLeft: "auto", opacity: 0.4, flexShrink: 0 }}>
