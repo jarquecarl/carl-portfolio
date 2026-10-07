@@ -51,7 +51,7 @@ export default function StartMenu({ onClose, onOpenWindow }: StartMenuProps) {
   };
 
   const handleGitHubClick = () => {
-    window.open("https://github.com/jarquecarl-debug", "_blank");
+    window.open("https://github.com/jarquecarl", "_blank");
     onClose();
   };
 
@@ -100,7 +100,7 @@ export default function StartMenu({ onClose, onOpenWindow }: StartMenuProps) {
           <span style={{ fontSize: 20 }}>🐙</span>
           <div>
             <div className="start-menu-rec-name">GitHub Profile</div>
-            <div className="start-menu-rec-time">github.com/jarquecarl-debug</div>
+            <div className="start-menu-rec-time">github.com/jarquecarl</div>
           </div>
         </button>
         <button className="start-menu-rec-item" onClick={handleLinkedInClick}>
