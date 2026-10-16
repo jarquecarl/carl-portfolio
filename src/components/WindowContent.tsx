@@ -70,9 +70,10 @@ export function ProjectsContent() {
     {
       title: "Digital Request & Approval System",
       subtitle: "Client Project",
-      desc: "A web application built during internship to digitalize MRF (Modification Request Form) processes, replacing manual record-keeping with a streamlined digital workflow.",
-      tags: ["React", "Tailwind", "JSX", "Vite"],
+      desc: "A web application that digitalizes a paper-based request form (MRF) process with a multi-step approval workflow. Built during an internship and later delivered as a contracted project. The live demo uses sample data only.",
+      tags: ["React", "Firebase", "Tailwind", "Vite"],
       status: "Delivered",
+      liveUrl: "https://request-approval-demo.netlify.app",
     },
     {
       title: "Fundo",
