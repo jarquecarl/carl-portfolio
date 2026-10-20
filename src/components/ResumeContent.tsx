@@ -2,10 +2,10 @@ export function ResumeContent() {
   return (
     <div className="resume-viewer">
       <div className="resume-toolbar">
-        <span className="resume-toolbar-label">📄 Carl_Christian_Jarque_CV.pdf</span>
+        <span className="resume-toolbar-label">📄 Carl_Jarque_CV.pdf</span>
         <a
-          href="/Carl_Christian_Jarque_CV.pdf"
-          download="Carl_Christian_Jarque_CV.pdf"
+          href="/Carl_Jarque_CV.pdf"
+          download="Carl_Jarque_CV.pdf"
           className="resume-download-btn"
         >
           ⬇ Download
@@ -13,7 +13,7 @@ export function ResumeContent() {
       </div>
       <div className="resume-embed-wrap">
         <iframe
-          src="/Carl_Christian_Jarque_CV.pdf"
+          src="/Carl_Jarque_CV.pdf"
           title="Resume"
           className="resume-iframe"
         />

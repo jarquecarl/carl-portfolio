@@ -60,6 +60,14 @@ export function AcademicWorksContent() {
 export function ProjectsContent() {
   const projects = [
     {
+      title: "Job Application Tracker",
+      subtitle: "Personal Project",
+      desc: "Two self-hosted n8n workflows: a Google Form logs each job application to a Google Sheet, and a daily workflow emails a follow-up reminder two weeks later if the status hasn't changed. Documented on GitHub with design decisions, a problems-and-fixes log, and screenshots.",
+      tags: ["n8n", "Google Sheets", "Gmail", "OAuth2"],
+      status: "Active",
+      github: "https://github.com/jarquecarl/n8n-job-application-tracker",
+    },
+    {
       title: "PhiNex",
       subtitle: "Thesis Project",
       desc: "PhiNex is a phishing detection security gateway built on the PYNQ-Z2 ARM-FPGA development board.",
@@ -110,8 +118,12 @@ export function ProjectsContent() {
                 <div className="project-subtitle">{p.subtitle}</div>
               </div>
               <div className="project-buttons">
-                <button className="btn-outline" onClick={() => p.liveUrl && window.open(p.liveUrl, "_blank")}>View Project</button>
-                <button className="btn-outline" onClick={() => p.github && window.open(p.github, "_blank")}>GitHub</button>
+                {p.liveUrl && (
+                  <button className="btn-outline" onClick={() => window.open(p.liveUrl, "_blank")}>View Project</button>
+                )}
+                {p.github && (
+                  <button className="btn-outline" onClick={() => window.open(p.github, "_blank")}>GitHub</button>
+                )}
               </div>
             </div>
             <div className="project-desc">{p.desc}</div>
@@ -162,6 +174,11 @@ export function SkillsContent() {
       title: "Hardware",
       skills: ["Arduino IDE"],
     },
+    {
+      icon: "🤖",
+      title: "Automation",
+      skills: ["n8n", "Workflow Automation", "Google Sheets", "Gmail", "OAuth2"],
+    },
   ];
 
   return (
@@ -195,21 +212,24 @@ export function AboutContent() {
       </div>
       <div className="about-header">
         <div className="about-name">Carl Christian Jarque</div>
-        <div className="about-title">Frontend Engineer · Computer Engineering Graduate</div>
+        <div className="about-title">Frontend Developer · Workflow Automation</div>
       </div>
       <div className="about-oneliner">
-        "CE by degree. Frontend by passion. Builder by nature."
+        "I turn manual processes into working software."
       </div>
       <div className="about-bio">
-        A Computer Engineering graduate with a passion for building modern digital solutions.
-        During my studies, I developed PhiNex — a phishing detection gateway on FPGA hardware.
-        My internship involved digitizing internal workflows through a React-based web app.
-        I'm driven by the intersection of engineering precision and elegant design.
+        Computer Engineering graduate (2026) from San Sebastian College Recoletos de Cavite.
+        My thesis, PhiNex, is a phishing detection gateway on FPGA hardware, and I built its
+        React monitoring dashboard. During my internship at HS Technologies I replaced a paper
+        request form with a React and Firebase approval system, then finished and deployed it
+        as a contractor. I also build personal projects, like an n8n workflow that emails me
+        job follow-up reminders, and I check the output of the AI tools I use daily against
+        real requirements.
       </div>
       <div className="about-buttons">
         <a
-          href="/Carl_Christian_Jarque_CV.pdf"
-          download="Carl_Christian_Jarque_CV.pdf"
+          href="/Carl_Jarque_CV.pdf"
+          download="Carl_Jarque_CV.pdf"
           className="btn-primary"
         >
           ⬇ Download Resume
@@ -225,7 +245,7 @@ export function ExperienceContent() {
   {
     company: "HS Technologies (Phils.) Inc.",
     role: "Frontend Developer (Contract)",
-    duration: "Jun 2026 – Jul 2026 · Project-based",
+    duration: "Jun 2026 – Aug 2026 · Contract / Remote",
     responsibilities: [
       "Delivered a production-ready version of the Digital Request & Approval System, resolving client-reported bugs, workflow corrections, and UI/UX changes.",
       "Fixed Firebase Authentication and Firestore data handling issues and ran final QA across all modules before deployment.",
@@ -303,10 +323,10 @@ export function ResumeContent() {
   return (
     <div className="resume-viewer">
       <div className="resume-embed-wrap">
-        <object data="/Carl_Christian_Jarque_CV.pdf" type="application/pdf" width="100%" height="100%">
+        <object data="/Carl_Jarque_CV.pdf" type="application/pdf" width="100%" height="100%">
           <p style={{ padding: 20, color: "rgba(255,255,255,0.6)", fontSize: 13 }}>
             PDF cannot be displayed.{" "}
-            <a href="/Carl_Christian_Jarque_CV.pdf" download style={{ color: "#60a5fa" }}>Download instead</a>
+            <a href="/Carl_Jarque_CV.pdf" download style={{ color: "#60a5fa" }}>Download instead</a>
           </p>
         </object>
       </div>
